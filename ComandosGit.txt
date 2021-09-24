@@ -1,0 +1,46 @@
+git init -> iniciar linha do tempo (repositorio onde serão guardadas as informações do projeto)
+
+git add -> inicia um ponto na historia do projeto (inclui o arquivo no projeto)
+
+git commit -> leva a alteração ao repositorio (sempre passar o git commit com uma mensagem. ex: git commit -m "mensagem")
+
+git log -> mostra os pontos criados na historia do projeto e alterações
+
+git status -> mostra o estado do desenvolvimento e exibe os arquivo modificados, mostra também arquivos que não foram adicionados na historia
+
+git show -> eu coloco o número do commit e ele vai exibir as alterações que fiz no arquivo em questão(ex: git show sff3154g451fsd1s53d543)
+
+git show sem o número do commit -> exibe o último ponto da historia
+
+git branch 'TIPO DA BRANCH' -> cria ramificações em pontos do projeto sem estragar o que já foi feito (ex: git branch 'TIPO DA BRANCH')
+
+git checkout -> muda para a ramificação que deseja fazer alterações (ex: git checkout TIPO DA BRANCH)
+
+git branch -> mostra todas as ramificações do projeto
+
+ls -al -> olha todas as alterações da ramificação atual com o horário
+
+git merge 'TIPO DA BRANCH' -> unir as ramificações incluindo a branch que é citada à branch atual
+
+git branch -D 'TIPO DA BRANCH' -> deletar a branch da nova funcionalidade, depois de aplicar em seu projeto
+
+git remote add origin 'LINK DO REPOSITORIO NO GITHUB' -> aponta para o repositorio remoto para onde quero mandar os arquivos
+
+git remote -v -> visualizar meus repositorios remotos
+
+git push -> empurra o repositorio local para o repositorio remoto
+
+git push -u origin master -> quando se tratar do primeiro push, cria a branch master no repositorio  remoto. Ele vai pedir o usuario e a senha do github
+
+git config credential helper store -> ele salva as credenciais para não precisarmos colocar o tempo todo login e senha
+
+git clone 'LINK DO PROJETO' -> dessa forma eu pego um projeto ja iniciado para dar andamento
+
+git commit -am "MENSAGEM" -> atualiza a branch
+
+git pull -> puxa as atualizações do repositorio remoto para o repositorio local
+
+Para voltar um arquivo para um determinado ponto na linha do tempo -> olho no git log qual o momento da linha do tempo eu quero e copio o codigo do commit. Depois dou um git checkout 'CÓDIGO DO COMMIT' --'NOME DO ARQUIVO QUE QUERO VOLTAR'
+
+Para recuperar algo deletado -> se eu der um git status ele vai mostrar o arquivo que deletei, eu copio o nome do arquivo, dou um git checkout --'NOME DO ARQUIVO DELETADO' (só funciona se a ultima alteração que eu fiz for deletar este arquivo), se não for a ultima alteração eu dou um git checkout e coloco o código do commit onde eu deletei o arquivo e escrevo o nome do arquivo (ex: git checkout sff3154g451fsd1s53d543 --webpack.config.js)
+
